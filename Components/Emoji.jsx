@@ -1,4 +1,4 @@
-import { useEmojiContext } from "./context/EmojiContext";
+import { useEmojiContext } from "../context/EmojiContext";
 
 function Emoji() {
     const {emoji, handleSwitchEmoji} = useEmojiContext();

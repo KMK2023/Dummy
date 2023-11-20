@@ -17,8 +17,8 @@ import Landscapes from '../Components/Landscapes'
 
 
 // Below to include Emoji for the country
-import Emoji from './components/Emoji'
-import { EmojiProvider } from './context/EmojiContext'
+import Emoji from '../Components/Emoji'
+import { EmojiProvider } from '../context/EmojiContext'
 
 // Import routes to route to the correct page
 import { Routes, Route } from "react-router-dom";
@@ -33,30 +33,26 @@ function App() {
         <Route path="country" element={<CountrySelection />} />
         <Route path="converter" element={<CurrencyConverter />} />
         <Route path="contactus" element={<Contactus />} />
-        <Route path="landscapes" element={<Landscapes />} />
+        {/* <Route path="landscapes" element={<Landscapes />} /> */}
     </Routes>
     
 
-  {/* Header */}
-    <Greeting/>
+  Header
+    {/* <Greeting/>
     <CountrySelection/>
     <CurrencyConverter/>
     <Landscapes/>
-    <Contactus/>
+    <Contactus/> */}
 
     {/* <EmojiContext/> */}
-  
+
 
   {/* Emoji Provider wraps the emoji and the landascapes so that emoji can be used in all of these */}
       <EmojiProvider>
       <Emoji/>
       </EmojiProvider>
 
-
   {/* Footer */}
-    
-
-   
 
     </>
   )

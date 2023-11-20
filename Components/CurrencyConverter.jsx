@@ -10,16 +10,28 @@ const CurrencyConverter = () => {
 
   useEffect(() => {
     // Fetch the list of currencies
-    // fetch('https://open.er-api.com/v6/latest')
+    
     fetch('https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_NaHrbEjc4DFUqmdAUDSy6uji9roGhmpYw1euVg8h')
-      .then((response) => response.json())
-      .then((data) => {
-        const currencyList = Object.keys(data.rates);
-        setCurrencies([data.base, ...currencyList]);
-        setExchangeRate(data.rates[toCurrency]);
-      })
-      .catch((error) => console.error('Error fetching data:', error));
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("updated data",data);
+      const currencyList = Object.keys(data.data);
+      setCurrencies([data.base, ...currencyList]);
+      setExchangeRate(data.data[toCurrency]);
+    })
+    .catch((error) => console.error('Error fetching data:', error));
   }, [toCurrency]);
+
+    //This is a dummy API for checking only.
+    // fetch('https://open.er-api.com/v6/latest')
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     // console.log("data",rate);
+    //     const currencyList = Object.keys(data.rates);
+    //     setCurrencies([data.base, ...currencyList]);
+    //     setExchangeRate(data.rates[toCurrency]);
+    //   })
+
 
   useEffect(() => {
     // Update the converted amount when the amount or exchange rate changes
