@@ -26,6 +26,7 @@ import LoginForm from '../Components/LoginForm'
 
 import VideoPlayer from '../Components/VideoPlayer'
 
+import CalendarComponent from '../Components/Calendar'
 
 function App() {
 
@@ -54,6 +55,8 @@ function App() {
     </useUserContext>
 
     <VideoPlayer/>
+
+    <CalendarComponent/>
 
     {/* <EmojiContext/> */}
 
