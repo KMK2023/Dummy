@@ -22,6 +22,10 @@ import { EmojiProvider } from '../context/EmojiContext'
 
 // Import routes to route to the correct page
 import { Routes, Route } from "react-router-dom";
+import LoginForm from '../Components/LoginForm'
+
+import VideoPlayer from '../Components/VideoPlayer'
+
 
 function App() {
 
@@ -33,16 +37,23 @@ function App() {
         <Route path="country" element={<CountrySelection />} />
         <Route path="converter" element={<CurrencyConverter />} />
         <Route path="contactus" element={<Contactus />} />
-        {/* <Route path="landscapes" element={<Landscapes />} /> */}
+        <Route path="Login" element={<LoginForm />} />
+        <Route path="landscapes" element={<Landscapes />} />
     </Routes>
     
 
-  Header
+  {/* Header */}
     {/* <Greeting/>
     <CountrySelection/>
     <CurrencyConverter/>
     <Landscapes/>
     <Contactus/> */}
+
+    <useUserContext>
+    <LoginForm/>
+    </useUserContext>
+
+    <VideoPlayer/>
 
     {/* <EmojiContext/> */}
 

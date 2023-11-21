@@ -1,43 +1,50 @@
 import { useContext, useState } from "react";
-import { useUserContext } from "../context/UserContext";
+// import { useUserContext } from "../context/UserContext";
 // import { MyThemeContext } from "../context/MyThemeContext";
 
 function LoginForm() {
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [submitResult, setSubmitResult] = useState('');
-    const {currentUser, handleUpdateUser} = useUserContext();
+    const [data,setData] = useState([{userEmail: "test@gmail.com", password: "testing"}])
+    //const {currentUser, handleUpdateUser} = useUserContext();
     // const {currentUser, handleUpdateUser} = useContext(UserContext);
-    const {theme, darkMode} = useContext(MyThemeContext);
+    //const {theme, darkMode} = useContext(MyThemeContext);
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // prevent page reloading on form submit
-
+         e.preventDefault(); // prevent page reloading on form submit
+        console.log("submit button clicked")
         // add some password validation
-        if (userPassword.length < 5) {
+        if (userPassword.length < 5) {  //if user password is less than 5
             setSubmitResult('Password must be at least 5 characters long');
         } else if (userPassword === userEmail) {
             setSubmitResult('Password must not match email address');
         } else {
-            setSubmitResult('Successful login.');
+            let validUser = data.find((item)=>(item.userEmail === userEmail && item.password === userPassword))
+            if(validUser){
+                setSubmitResult('Successful login.');
+            }else{
+                setSubmitResult("User does not match");
+            }
+            
             handleUpdateUser({ email: userEmail });
         }
     }
 
     {/* if the user is already logged in, show msg instead of form */}
-    if (currentUser.email) return (
-        <><p>Welcome {currentUser.email}!</p>
-        <button onClick={() => handleUpdateUser({})}>Log Out</button>
-        </>
-    );
+    // if (currentUser.email) return (
+    //     <><p>Welcome {currentUser.email}!</p>
+    //     <button onClick={() => handleUpdateUser({})}>Log Out</button>
+    //     </>
+    // );
 
     return (
-        <div className="LoginForm componentBox"
-            style={{background: theme.background, color: theme.foreground}}>
-            <form onSubmit={handleSubmit} className={darkMode ? 'dark' : 'light'}>
+        <div className="LoginForm componentBox">
+            //form tag
+            <form onSubmit={handleSubmit}>
                 <div className="formRow">
                     <label>Email Address:
-                        <input type="email" value={userEmail} name="userEmail"
+                        <input type="email" value={userEmail} name="userEmail"   
                             onChange={(e) => setUserEmail(e.target.value)} />
                     </label>
                 </div>
@@ -46,9 +53,10 @@ function LoginForm() {
                         <input type="password" value={userPassword} name="password"
                             onChange={(e) => setUserPassword(e.target.value)} />
                     </label>
+                    <p style={{color: 'red'}}>{submitResult}</p>
                 </div>
                 <button>Log In</button>
-                <p>{submitResult}</p>
+               
             </form>
         </div>
     )

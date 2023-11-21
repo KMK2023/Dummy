@@ -1,0 +1,2 @@
+https://cloud.visadb.io/apis/enterprise/v1/visaApi?from=US&to=FR&lng=en
+for visa related APIs
