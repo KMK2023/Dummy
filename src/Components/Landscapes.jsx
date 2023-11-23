@@ -18,7 +18,7 @@ function Landscapes(){
         
           const India = {
             name: "India",
-            alias: "Barath",
+            alias: "Bharath",
             img: "../src/assets/Singapore.jpg",
             Tidbits: "The land of colours, cultures",
           };
@@ -35,19 +35,19 @@ function Landscapes(){
 // Step: To call forth the above drefined constants to be displayed
           const getcountryData = (country) => {
             return (
-              <div style={{ color: "white", backgroundColor: "black", padding: "10px" }}>
+              <div style={{ color: "#c18a8a", padding: "10px" }}>
               <img src={country.img} alt={country.name} style={{ maxWidth: '30%', height: 'auto' }} />
               <h3>{country.name}</h3>
               <blockquote>{country.alias}</blockquote>
               <p>{country.Tidbits}</p>
               </div>
-            );
+            );x
           };
         
        return (
-        <div style={{display:'flex', backgroundColor: 'grey', color: 'black', border: 'solid' }}>
-       {data.map((somecountry) => {
-        return getcountryData(somecountry);
+        <div style={{display:'flex', background : '#000000', border: 'solid' }}>
+          {data.map((somecountry) => {
+            return getcountryData(somecountry);
         })}
        </div>
           );

@@ -11,14 +11,16 @@ const CalendarComponent = () => {
   };
 
   return (
+    <div className="Calendar" style={{border:'solid 2px', margin:'10em', padding: '10px'}}>
     <div>
-      <h1>Calendar Example</h1>
+      <h1>Calendar</h1>
       <Calendar
         onChange={onChange}
         value={date}
       />
       <p>Selected date: {date.toDateString()}</p>
       {/* Add your additional components or logic here */}
+    </div>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 // import React from 'react';
 
 function Contactus() {
+
+
   const tableStyle = {
     borderCollapse: 'collapse',
     width: '100%',
@@ -17,7 +19,7 @@ function Contactus() {
       <table style={tableStyle}>
         <tbody>
           <tr>
-            <td style={cellStyle}><strong>Bio</strong></td>
+            <td style={cellStyle}><strong>Theme</strong></td>
             <td style={cellStyle}>{children}</td>
           </tr>
           <tr>
@@ -33,8 +35,8 @@ function Contactus() {
             <td style={cellStyle}>{phone}</td>
           </tr>
           <tr>
-            <td style={cellStyle}><strong>Bio</strong></td>
-            <td style={cellStyle}>{children}</td>
+            <td style={cellStyle}><strong>Disclaimer</strong></td>
+            <td style={cellStyle}>{}</td>
           </tr>
         </tbody>
       </table>
@@ -43,10 +45,12 @@ function Contactus() {
 
   return (
     <>
+      <div style={{ backgroundColor: '#d2d2b6', color: 'black', border: 'solid' }}>
       <h2>Contact Us</h2>
-      <Profile names="Travel every-where" email="Great.name@kink.com" phone="879877">
-        The travel page that is your vision board and also your one-stop diary for all your travel explorations!
+      <Profile names="Travel every-where" email="lightkr@gmail.com" >
+        All the information on this website is provided for quick reference purposes. It is the users responsibility to ensure the accuracy of the information while using it. The website owners do not assume any responsibility for the accuracy of the information.
       </Profile>
+      </div>
     </>
   );
 }

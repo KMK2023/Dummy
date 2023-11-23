@@ -8,6 +8,7 @@ function Slider() {
   };
 
   return (
+    <div className="Slider" style={{border:'solid 2px', margin:'10em', padding: '10px'}}>
     <div>
       <h1>Slider with budget value</h1>
 
@@ -24,6 +25,7 @@ function Slider() {
       />
 
       <p>Selected Value: {sliderValue}</p>
+    </div>
     </div>
   );
 }

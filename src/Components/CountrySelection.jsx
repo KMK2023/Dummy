@@ -39,6 +39,7 @@
 
 
 import React, { useState, useEffect } from 'react';
+import Worldmap from '../Pages/worldmap.jpg'; // Import the image
 
 const apiUrl = 'https://restcountries.com/v3.1/all';
 
@@ -77,7 +78,11 @@ function CountrySelection() {
 
   return (
     <div>
-      <h1>Filtered Data</h1>
+       <div style={{ backgroundColor: '#f3f3ce', color: 'black', border: 'solid', padding:'30px' }}>
+       <img src={Worldmap} alt="World Map" style={{ width: '300px', margin: 'auto' }} />
+      <h2>Country selection with places</h2>
+      
+      <br/>
 
       <label>
         Select Continent:
@@ -111,6 +116,8 @@ function CountrySelection() {
           ))}
         </select>
       </label>
+
+      </div>
     </div>
   );
 }

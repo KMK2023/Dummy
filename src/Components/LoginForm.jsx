@@ -4,16 +4,29 @@ import { useContext, useState } from "react";
 
 function LoginForm() {
 
-    <div style={{ backgroundColor: 'lightgrey', color: 'black', border: 'solid' }}>
-        
-    </div>
-    const [userEmail, setUserEmail] = useState('');
-    const [userPassword, setUserPassword] = useState('');
-    const [submitResult, setSubmitResult] = useState('');
-    const [data,setData] = useState([{userEmail: "test@gmail.com", password: "testing"}])
-    //const {currentUser, handleUpdateUser} = useUserContext();
-    // const {currentUser, handleUpdateUser} = useContext(UserContext);
-    //const {theme, darkMode} = useContext(MyThemeContext);
+
+
+const serverUrl = 'localhost:8080/api/users/';
+
+const [userEmail, setUserEmail] = useState('');
+const [userPassword, setUserPassword] = useState('');
+const [submitResult, setSubmitResult] = useState('');
+const [data,setData] = useState([{userEmail: "test@gmail.com", password: "testing"}])
+//const {currentUser, handleUpdateUser} = useUserContext();
+// const {currentUser, handleUpdateUser} = useContext(UserContext);
+//const {theme, darkMode} = useContext(MyThemeContext);
+
+// useEffect(() => {
+//   // Fetch data from the server when the component mounts
+//   fetch(serverUrl)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       setdata(data); 
+//     })
+//     .catch((error) => console.error('Error fetching data:', error));
+// }, []); 
+
+
 
     const handleSubmit = (e) => {
          e.preventDefault(); // prevent page reloading on form submit
@@ -43,7 +56,8 @@ function LoginForm() {
     // );
 
     return (
-        <div className="LoginForm componentBox" style={{ backgroundColor: 'grey', color: 'black', border: 'solid' }}> 
+        
+        <div className="LoginForm componentBox" style={{ backgroundColor: '#a09f9f', color: 'black', border: 'solid', padding:' 30px' }}> 
             //form tag
             <form onSubmit={handleSubmit}>
                 <div className="formRow">

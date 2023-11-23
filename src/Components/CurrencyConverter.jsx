@@ -53,6 +53,7 @@ const CurrencyConverter = () => {
   };
 
   return (
+  <div style={{ backgroundColor: '#d2d2b6', color: 'black', border: 'solid' }}>
     <div>
       <h2>Currency Converter for my travel budget for 1 Person</h2>
       <div>
@@ -85,6 +86,7 @@ const CurrencyConverter = () => {
         </p>
       </div>
     </div>
+  </div>
   );
 };
 

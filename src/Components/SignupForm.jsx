@@ -32,6 +32,7 @@ const SignUpForm = () => {
   };
 
   return (
+    <div className="ignup" style={{border:'solid 2px', margin:'10em', padding: '10px'}}>
     <form onSubmit={handleSubmit}>
       <label>
         Name:
@@ -77,6 +78,7 @@ const SignUpForm = () => {
       <br />
       <button type="submit">Sign Up</button>
     </form>
+    </div>
   );
 };
 

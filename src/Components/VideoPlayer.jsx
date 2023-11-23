@@ -13,7 +13,7 @@ export default function VideoPlayer() {
     }
 console.log('rendering')
     return (
-        <div className="VideoPlayer componentBox">
+        <div className="VideoPlayer componentBox" style={{border:'solid 2px', margin:'10em', padding: '10px'}}>
             {/* button to play or pause the video */}
             <button onClick={handleClick}>{isPlaying ? 'Pause' : 'Play'}</button>
             {/* 2. Initialise the ref */}

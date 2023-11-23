@@ -63,11 +63,17 @@ function App() {
 
     <CalendarComponent/>
 
+    <Landscapes/>
+
     <Slider/>
 
     <CountrySelection/>
 
+    <CurrencyConverter/>
+
     <Cardslots/>
+
+    <Contactus/>
 
     {/* <EmojiContext/> */}
 
