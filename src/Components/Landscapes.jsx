@@ -45,7 +45,7 @@ function Landscapes(){
           };
         
        return (
-        <div style={{display:"flex"}}>
+        <div style={{display:'flex', backgroundColor: 'grey', color: 'black', border: 'solid' }}>
        {data.map((somecountry) => {
         return getcountryData(somecountry);
         })}

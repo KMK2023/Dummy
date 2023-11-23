@@ -3,6 +3,10 @@ import { useContext, useState } from "react";
 // import { MyThemeContext } from "../context/MyThemeContext";
 
 function LoginForm() {
+
+    <div style={{ backgroundColor: 'lightgrey', color: 'black', border: 'solid' }}>
+        
+    </div>
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [submitResult, setSubmitResult] = useState('');
@@ -39,7 +43,7 @@ function LoginForm() {
     // );
 
     return (
-        <div className="LoginForm componentBox">
+        <div className="LoginForm componentBox" style={{ backgroundColor: 'grey', color: 'black', border: 'solid' }}> 
             //form tag
             <form onSubmit={handleSubmit}>
                 <div className="formRow">
@@ -59,6 +63,7 @@ function LoginForm() {
                
             </form>
         </div>
+
     )
 }
 

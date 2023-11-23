@@ -59,6 +59,19 @@ function AddPlaceForm({onAddplace}) {
 
 function Cardslots() {
 
+    // fetch(apiUrl)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     // Extract continents, countries, and cities from the API response
+    //     const uniqueContinents = Array.from(new Set(data.map((country) => country.region)));
+    //     const uniqueCountries = Array.from(new Set(data.map((country) => country.name.common)));
+    //     const uniqueCities = Array.from(new Set(data.flatMap((country) => country.capital)));
+
+    //     setContinents(uniqueContinents);
+    //     setCountries(uniqueCountries);
+    //     setCities(uniqueCities);
+    //   })
+
     const [currentPlace, setcurrentPlace] = useState(Place);
 
     const handleSortPlace = () => {

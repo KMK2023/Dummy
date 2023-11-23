@@ -25,6 +25,7 @@ import { Routes, Route } from "react-router-dom";
 import LoginForm from './Components/LoginForm'
 
 import VideoPlayer from './Components/VideoPlayer'
+import SignupForm from './Components/SignupForm'
 
 import CalendarComponent from './Components/Calendar'
 
@@ -58,9 +59,13 @@ function App() {
 
     <VideoPlayer/>
 
+    <SignupForm/>
+
     <CalendarComponent/>
 
     <Slider/>
+
+    <CountrySelection/>
 
     <Cardslots/>
 
