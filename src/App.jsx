@@ -7,6 +7,7 @@ import './App.css'
 //Intropage
 import Greeting from './Components/Greeting'
 
+
 // Select the country and type you are looking for 
 import CountrySelection from './Components/CountrySelection'
 import CurrencyConverter from './Components/CurrencyConverter'
@@ -32,17 +33,24 @@ import CalendarComponent from './Components/Calendar'
 import Cardslots from './Components/Cardslots'
 
 import Slider from './Components/Slider'
+
+import NavBar from './Components/NavBar'
 function App() {
+
+
 
   return (
     <>
+    <NavBar/>
+
     <Routes>
         <Route index element={<Greeting />} />
         <Route path="country" element={<CountrySelection />} />
-        <Route path="converter" element={<CurrencyConverter />} />
+        <Route path="currency" element={<CurrencyConverter />} />
         <Route path="contactus" element={<Contactus />} />
-        <Route path="Login" element={<LoginForm />} />
+        <Route path="login" element={<LoginForm />} />
         <Route path="landscapes" element={<Landscapes />} />
+        <Route path="contact" element={<Contactus />} />
     </Routes>
     
 
@@ -53,11 +61,11 @@ function App() {
     <Landscapes/>
     <Contactus/> */}
 
-    <useUserContext>
+    {/* {/* <useUserContext>
     <LoginForm/>
-    </useUserContext>
+    </useUserContext> */}
 
-    <VideoPlayer/>
+    {/* <VideoPlayer/>
 
     <SignupForm/>
 
@@ -73,7 +81,8 @@ function App() {
 
     <Cardslots/>
 
-    <Contactus/>
+    <Contactus/> */} 
+
 
     {/* <EmojiContext/> */}
 
