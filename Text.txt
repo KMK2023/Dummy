@@ -3,3 +3,7 @@ for visa related APIs
 
 
 Imports were npm install react-calendar
+
+
+Running doclker ports using command 
+docker run -d -p 7010:8080 kmk2023/capstonetrial
