@@ -5,60 +5,60 @@ import { useEffect } from "react";
 const Place = [
   {
     id: 1,
-    name: "Location1",
+    title: "Location1",
     description: "00-00-2023",
     image:
       "https://www.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_19894677.htm#query=traveling%20day&position=0&from_view=search&track=ais&uuid=2c7e778d-c0ce-4455-85d2-93252f27a5c3",
   },
   {
     id: 2,
-    name: "Location2",
+    title: "Location2",
     description: "06-08-2022",
     image:
       "https://img.freepik.com/free-photo/travel-concept-with-landmarks_23-2149153262.jpg?2&w=1380&t=st=1700720481~exp=1700721081~hmac=d43aa2166fd0a7b7a3b3982c6086b9703a86da0cd5ab9e71e423646f6b38f7c4",
   },
   {
     id: 3,
-    name: "Location3",
+    title: "Location3",
     description: "09-07-2012",
     image:
       "https://img.freepik.com/free-photo/travel-concept-with-landmarks_23-2149153256.jpg?w=1800&t=st=1700720525~exp=1700721125~hmac=d038839c13f64aab4033079f3a9e03630b3b90a46ffefde53066aae68c9b5a20",
   },
   {
     id: 4,
-    name: "Location4",
+    title: "Location4",
     description: "12-08-2023",
     image:
       "https://img.freepik.com/free-photo/holiday-travel-icon-vacation-concept_53876-120873.jpg?w=1480&t=st=1700720549~exp=1700721149~hmac=891a68de38d620aa86fa20606ade00a39169e54a4b6091c8eb2687d31a4a0cbd",
   },
   {
     id: 5,
-    name: "Location5",
+    title: "Location5",
     description: "11-01-2000",
     image:
       "https://img.freepik.com/free-photo/travelling-concept-with-group-travelers-miniature_1150-17844.jpg?w=1480&t=st=1700720566~exp=1700721166~hmac=5b9eada1f0d009c5d2f4903c972b9ce1b5199204867d321d065fdd253caba9d9",
   },
   {
     id: 6,
-    name: "Location6",
+    title: "Location6",
     description: "30-06-2012",
     image:
       "https://img.freepik.com/free-photo/top-view-traveling-items-wooden-background_23-2148971050.jpg?w=1480&t=st=1700720620~exp=1700721220~hmac=7f61ba285f269541b5246cc42d41e6f508d9c01c197eb3df3823825671c03b33",
   },
   {
     id: 7,
-    name: "Location7",
+    title: "Location7",
     description: "03-03-2011",
     image:
       "https://img.freepik.com/free-photo/planning-traveling-trip-notes-wanderkust_53876-127488.jpg?w=1480&t=st=1700720642~exp=1700721242~hmac=9134eb763cc2eeb977e80ebdab5ec8c2003021906b1b72734263e92df6130304",
   },
 ];
 
-function SinglePlaces({ id, name, description, image, onRemovePlace }) {
+function SinglePlaces({ id, title, description, image, onRemovePlace }) {
   return (
     <li>
-      <img src={image} width="400" alt={title} />
-      <h3>{name}</h3>
+      <img src={image} width="400" />
+      <h3>{title}</h3>
       <em>({description})</em>&nbsp;
       <a onClick={() => onRemovePlace(id)}>Delete</a>
     </li>
@@ -66,13 +66,13 @@ function SinglePlaces({ id, name, description, image, onRemovePlace }) {
 }
 
 function AddPlaceForm({ onAddplace }) {
-  const [name, setName] = useState("");
+  const [title, setName] = useState("");
   const [description, setdescription] = useState("");
   const [imageURL, setImageURL] = useState("");
 
   const handleAddplace = (e) => {
     e.preventDefault();
-    onAddplace({ name, description, image: imageURL });
+    onAddplace({ title, description, image: imageURL });
   };
 
   return (
@@ -85,7 +85,7 @@ function AddPlaceForm({ onAddplace }) {
           Name:
           <input
             name="name"
-            value={name}
+            value={title}
             onChange={(e) => setName(e.target.value)}
           />
         </label>
