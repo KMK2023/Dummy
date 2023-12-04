@@ -41,8 +41,13 @@ function NavBar() {
         </li>
 
         <li>
-          <NavLink to="/landscapes" style={navLinkStyle}>
-            Landscapes
+          <NavLink to="/Gallery" style={navLinkStyle}>
+            Gallery
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/Cardslots" style={navLinkStyle}>
+            Cardslots
           </NavLink>
         </li>
         <li>

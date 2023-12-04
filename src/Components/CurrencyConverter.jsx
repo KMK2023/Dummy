@@ -55,7 +55,7 @@ const CurrencyConverter = () => {
 
   return (
     <div
-      style={{ backgroundColor: "#000000", color: "white", border: "solid" }}
+      style={{ backgroundColor: "#000000", color: "white", padding: "40px" }}
     >
       <div>
         <h2>Currency Converter for my travel budget for 1 Person</h2>
@@ -88,15 +88,10 @@ const CurrencyConverter = () => {
           <p>
             {amount} {fromCurrency} is equal to {convertedAmount} {toCurrency}
           </p>
-
-          <h2>Currency Converter for my travel budget for 1 Person</h2>
         </div>
       </div>
     </div>
   );
 };
 
-
-
 export default CurrencyConverter;
-

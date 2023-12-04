@@ -63,7 +63,6 @@ function LoginForm() {
       style={{
         backgroundColor: "#000000",
         color: "white",
-        border: "solid",
         padding: " 30px",
       }}
     >

@@ -10,10 +10,15 @@ function Slider() {
   return (
     <div
       className="Slider"
-      style={{ border: "solid 2px", margin: "10em", padding: "10px" }}
+      style={{
+        border: "solid 0px",
+        color: "white",
+        margin: "10em",
+        padding: "10px",
+      }}
     >
       <div>
-        <h3>Slider with budget value</h3>
+        <h2>Slider with budget value</h2>
 
         <label htmlFor="slider">Slider:</label>
         <input

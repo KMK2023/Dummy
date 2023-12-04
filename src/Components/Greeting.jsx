@@ -19,7 +19,6 @@ function Greeting({ name, children }) {
         style={{
           backgroundColor: "black",
           color: "white",
-          border: "solid",
           padding: "20px",
         }}
       >

@@ -34,8 +34,11 @@ const SignUpForm = () => {
   return (
     <div
       className="signup"
-      style={{ backgroundColor: "#000000",
-      color: "white",border: "solid 2px", margin: "10em", padding: "50px" }}
+      style={{
+        backgroundColor: "#000000",
+        color: "white",
+        padding: "50px",
+      }}
     >
       <form onSubmit={handleSubmit}>
         <label>

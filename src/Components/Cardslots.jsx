@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useEffect } from "react";
-// import './BigPlace.css'
 
 const Place = [
   {
@@ -76,9 +75,7 @@ function AddPlaceForm({ onAddplace }) {
   };
 
   return (
-    <div
-      style={{ backgroundColor: "#a3a38f", color: "black", border: "solid" }}
-    >
+    <div style={{ backgroundColor: "#000000", color: "white" }}>
       <form onSubmit={handleAddplace}>
         <h3>Add New Memory</h3>
         <label>
@@ -155,7 +152,7 @@ function Cardslots() {
 
   const handleFilterPlace = () => {
     let newPlace = currentPlace.filter((place) =>
-      place.description.startsWith("Panthera")
+      place.description.startsWith("A")
     );
     setcurrentPlace(newPlace);
   };
@@ -202,10 +199,9 @@ function Cardslots() {
     <>
       <div
         style={{
-          backgroundColor: "#747464",
-          color: "black",
-          border: "solid",
-          padding: "20px",
+          backgroundColor: "#000000",
+          color: "white",
+          padding: "100px",
         }}
       >
         <h2>Places I have visited</h2>

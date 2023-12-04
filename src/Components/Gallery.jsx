@@ -1,8 +1,4 @@
-
-
-function Landscapes() {
-
-
+function Gallery() {
   <h2>Top Trending Destinations</h2>;
 
   const Singapore = {
@@ -40,25 +36,28 @@ function Landscapes() {
   // Step: To call forth the above drefined constants to be displayed
   const getcountryData = (country) => {
     return (
-<>
-
-      <div style={{ color: "#ffffff", padding: "40px", display: "grid" }}>
-        <img
-          src={country.img}
-          alt={country.name}
-          style={{ maxWidth: "50vh", height: "auto" }}
-        />
-        <h3>{country.name}</h3>
-        <blockquote>{country.alias}</blockquote>
-        <p>{country.Tidbits}</p>
-      </div>
+      <>
+        <div style={{ color: "#ffffff", padding: "40px", display: "grid" }}>
+          <img
+            src={country.img}
+            alt={country.name}
+            style={{
+              maxWidth: "20vh",
+              height: "auto",
+              display: "-ms-flexbox",
+              padding: "10px",
+            }}
+          />
+          <h3>{country.name}</h3>
+          <blockquote>{country.alias}</blockquote>
+          <p>{country.Tidbits}</p>
+        </div>
       </>
     );
     x;
   };
 
   return (
-    
     <div style={{ display: "flex", background: "#000000", border: "solid" }}>
       {data.map((somecountry) => {
         return getcountryData(somecountry);
@@ -67,4 +66,4 @@ function Landscapes() {
   );
 }
 
-export default Landscapes;
+export default Gallery;

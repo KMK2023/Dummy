@@ -5,8 +5,8 @@ const sequelize = require("sequelize");
 const Models = require("../models");
 
 // To get any post with find all inside the models, within the post
-const getPost = (res) => {
-  Models.Posts.findAll({})
+const getUsers = (res) => {
+  Models.Users.findAll({})
     .then(function (data) {
       res.send(data);
     })
@@ -15,8 +15,8 @@ const getPost = (res) => {
     });
 };
 // To create a new post inside the models, within the post
-const createPost = (data, res) => {
-  Models.Posts.create(data)
+const createUsers = (data, res) => {
+  Models.Users.create(data)
     .then(function (data) {
       res.send(data);
     })
@@ -26,8 +26,8 @@ const createPost = (data, res) => {
 };
 
 // To get any post with a specific ID inside the models, within the post
-const getPostById = (id, res) => {
-  Models.Posts.findOne({ where: { id: id } })
+const getuserById = (id, res) => {
+  Models.Users.findOne({ where: { id: id } })
     .then(function (data) {
       res.send(data);
     })
@@ -37,8 +37,8 @@ const getPostById = (id, res) => {
 };
 
 // To update a specific post inside the models, within the post
-const updatePost = (id, data, res) => {
-  Models.Posts.update(data, { where: { id: id } })
+const updateUser = (id, data, res) => {
+  Models.Users.update(data, { where: { id: id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -48,8 +48,8 @@ const updatePost = (id, data, res) => {
 };
 
 // To delete a specific post inside the models, within the post
-const deletePost = (id, res) => {
-  Models.Posts.destroy({ where: { id: id } })
+const deleteUser = (id, res) => {
+  Models.Users.destroy({ where: { id: id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -59,9 +59,9 @@ const deletePost = (id, res) => {
 };
 
 module.exports = {
-  getPost,
-  createPost,
-  getPostById,
-  updatePost,
-  deletePost,
+  getUsers,
+  createUsers,
+  getUserById,
+  updateUser,
+  deleteUser,
 };
